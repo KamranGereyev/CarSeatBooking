@@ -1,6 +1,5 @@
-import React from "react";
-import SeatButton from "./SeatButton.tsx";
-import type {SeatsState} from "./model.ts";
+import SeatButton from "./SeatButton";
+import type {SeatsState} from "./model";
 
 interface CarTopViewProps {
     seats: SeatsState;

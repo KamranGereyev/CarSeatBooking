@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { buildDirectionsUrl, shareOrCopy, ORIGIN, DESTINATION } from "../src/lib/routes.ts";
+import { useState } from "react";
+import { buildDirectionsUrl, shareOrCopy, ORIGIN, DESTINATION } from "../src/lib/routes";
 
 export default function RouteShareBar() {
     const [note, setNote] = useState<string | null>(null);

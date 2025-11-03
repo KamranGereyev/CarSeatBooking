@@ -1,4 +1,3 @@
-import React from "react";
 import type {SeatStatus} from "./model.ts";
 
 interface SeatButtonProps {
@@ -8,7 +7,7 @@ interface SeatButtonProps {
     status: SeatStatus;
     onClick: () => void;
 }
-const SeatButton = ({id, label, note, status, onClick}: SeatButtonProps) => {
+const SeatButton = ({label, note, status, onClick}: SeatButtonProps) => {
     const base =
         "relative flex flex-col items-center justify-center rounded-lg border text-center select-none cursor-pointer transition active:scale-[0.98] py-4";
 

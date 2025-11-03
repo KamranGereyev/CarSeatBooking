@@ -1,11 +1,11 @@
-import React, { useState, useMemo, useEffect } from "react";
-import ConfirmModal from "./ConfirmModal.tsx";
-import type {SeatsState} from "./model.ts";
-import CarTopView from "./CarTopView.tsx";
-import PhotoSlider from "./PhotoSlider.tsx";
-import { loadSeats, saveSeats, clearSeats, storageKey } from "./lib/storage";
+import { useState, useMemo, useEffect } from "react";
+import ConfirmModal from "./ConfirmModal";
+import type {SeatsState} from "./model";
+import CarTopView from "./CarTopView";
+import PhotoSlider from "./PhotoSlider";
+import { loadSeats, clearSeats, storageKey } from "./lib/storage";
 import { listenSeats, reserveMany, releaseMany } from "./lib/seats";
-import RouteShareBar from "./RouteShareBar.tsx";
+import RouteShareBar from "./RouteShareBar";
 
 const RIDE_ID = "2025-11-03-opel-astrah";
 const USER_NAME = "AnonUser-" + Math.floor(Math.random()*10000); // istəsən formdan götür
@@ -163,8 +163,7 @@ export default function CarSeatBookingApp() {
 
             {isModalOpen && (
                 <ConfirmModal
-                    chosenSeatIds={chosenSeatIds}
-                    // onConfirm={() => setIsModalOpen(false)}
+                    chosenSeatIds={chosenSeatIds.map(String)}
                     onConfirm={confirmBooking}
                     onCancel={() => setIsModalOpen(false)}
                 />

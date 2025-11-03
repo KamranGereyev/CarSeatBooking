@@ -1,6 +1,6 @@
 import { db } from "./firebase";
 import {
-    ref, onValue, runTransaction, set, remove
+    ref, onValue, runTransaction
 } from "firebase/database";
 
 export type SeatNum = 2 | 3 | 4 | 5;
